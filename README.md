@@ -15,13 +15,38 @@ This repository provides an extended and modified implementation of YOLOv3 in Te
 
 ## Installation
 
-Clone the repository and install dependencies:
+Clone the repository:
 
 ```bash
 git clone https://github.com/mos-ks/yolo-V3.git
 cd yolo-V3
-pip install -r requirements-gpu.txt
 ```
+
+### Recommended Environment Setup (Conda)
+
+Create a new environment with matching libraries from conda-forge:
+
+```bash
+conda create -n tf-yolo python=3.9 \
+             tensorflow=2.12 \
+             cudatoolkit=11.8 cudnn=8.8 \
+             opencv pyyaml -c conda-forge -y
+conda activate tf-yolo
+```
+
+### Optional Extras (pip only)
+
+Install additional packages strictly from pip:
+
+```bash
+pip install "numpy>=1.22,<1.26" "scipy>=1.8,<1.11" pycocotools
+pip install -U "protobuf<4"         # TF-2.12 needs < 4
+pip uninstall -y keras keras-nightly keras-unofficial  # prevent Keras-3
+```
+
+> **Note:**
+> - Do not install Keras 3.x, as TensorFlow 2.12 is not compatible. The above uninstall command prevents issues.
+> - If you use `requirements-gpu.txt`, only install pip-only packages (not conda packages).
 
 ## Pre-trained Weights Conversion
 

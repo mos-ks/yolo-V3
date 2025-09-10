@@ -1,6 +1,7 @@
-tensorflow==2.12.0
-opencv-python==4.3.0.38
-lxml
-tqdm
 
--e .
+# Only install these via pip, not conda
+numpy>=1.22,<1.26
+scipy>=1.8,<1.11
+pycocotools
+protobuf<4
+# Do not install keras 3.x, uninstall if present

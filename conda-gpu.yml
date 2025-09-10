@@ -1,0 +1,10 @@
+name: tf-yolo
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - tensorflow=2.12
+  - cudatoolkit=11.8
+  - cudnn=8.8
+  - opencv
+  - pyyaml
