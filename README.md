@@ -132,7 +132,7 @@ python eval.py \
 ## Troubleshooting & Tips
 - Ensure all paths are correct and files exist.
 - For GPU support, verify CUDA and cuDNN installation.
-- Use compatible TensorFlow and Python versions as specified in `requirements-gpu.txt` and `conda-gpu.yml`.
+- Use compatible TensorFlow and Python versions as specified in `requirements-gpu.txt`.
 - If you encounter errors, check log outputs and refer to the referenced repositories for solutions.
 
 ## References
