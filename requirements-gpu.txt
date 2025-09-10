@@ -1,0 +1,6 @@
+tensorflow==2.12.0
+opencv-python==4.3.0.38
+lxml
+tqdm
+
+-e .
